@@ -23,6 +23,7 @@
 		"dist.js"
 	],
 	"keywords": [
+		"ink-component",
 		"ink",
 		"component",
 		"link",

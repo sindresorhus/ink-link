@@ -1,8 +1,7 @@
-'use strict';
-const {h, renderToString} = require('ink');
-const PropTypes = require('prop-types');
-const ansiEscapes = require('ansi-escapes');
-const supportsHyperlinks = require('supports-hyperlinks');
+import {h, renderToString} from 'ink';
+import PropTypes from 'prop-types';
+import ansiEscapes from 'ansi-escapes';
+import supportsHyperlinks from 'supports-hyperlinks';
 
 const Link = props => {
 	const text = renderToString(<span>{props.children}</span>);
