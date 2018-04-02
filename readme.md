@@ -46,6 +46,12 @@ Type: `string`
 URL to link to.
 
 
+## Related
+
+- [ink-box](https://github.com/sindresorhus/ink-box) - Box component for Ink
+- [ink-gradient](https://github.com/sindresorhus/ink-gradient) - Gradient color component for Ink
+
+
 ## License
 
 MIT © [Sindre Sorhus](https://sindresorhus.com)
