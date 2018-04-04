@@ -48,6 +48,7 @@ URL to link to.
 
 ## Related
 
+- [terminal-link](https://github.com/sindresorhus/terminal-link) - Create clickable links in the terminal
 - [ink-box](https://github.com/sindresorhus/ink-box) - Box component for Ink
 - [ink-gradient](https://github.com/sindresorhus/ink-gradient) - Gradient color component for Ink
 

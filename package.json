@@ -37,9 +37,8 @@
 		"command-line"
 	],
 	"dependencies": {
-		"ansi-escapes": "^3.1.0",
 		"prop-types": "^15.6.1",
-		"supports-hyperlinks": "^1.0.1"
+		"terminal-link": "^1.0.0"
 	},
 	"devDependencies": {
 		"ava": "*",
