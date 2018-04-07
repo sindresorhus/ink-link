@@ -17,17 +17,16 @@ $ npm install ink-link
 ## Usage
 
 ```js
-const {h, render, Text} = require('ink');
-const Link = require('ink-link');
+import {h, render, Color} from 'ink';
+import Link from 'ink-link';
 
 render(
 	<div>
 		<Link url="https://sindresorhus.com">
-			My <Text cyan>Website</Text>
+			My <Color cyan>Website</Color>
 		</Link>
 	</div>
 );
-//=>
 ```
 
 
@@ -51,6 +50,7 @@ URL to link to.
 - [terminal-link](https://github.com/sindresorhus/terminal-link) - Create clickable links in the terminal
 - [ink-box](https://github.com/sindresorhus/ink-box) - Box component for Ink
 - [ink-gradient](https://github.com/sindresorhus/ink-gradient) - Gradient color component for Ink
+- [ink-big-text](https://github.com/sindresorhus/ink-big-text) - Awesome text component for Ink
 
 
 ## License
