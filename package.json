@@ -47,7 +47,7 @@
 		"clear-module": "^2.1.0",
 		"eslint-config-xo-react": "^0.16.0",
 		"eslint-plugin-react": "^7.7.0",
-		"ink": "^0.4.1",
+		"ink": "^0.5.0",
 		"xo": "*"
 	},
 	"babel": {
