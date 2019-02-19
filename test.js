@@ -1,5 +1,6 @@
 import {serial as test} from 'ava';
-import {h, renderToString} from 'ink';
+import React from 'react';
+import {renderToString, Color} from 'ink';
 import clearModule from 'clear-module';
 
 test.beforeEach(() => {
@@ -16,7 +17,7 @@ test('render', t => {
 
 	const actual = renderToString(
 		<Link url="https://sindresorhus.com">
-			My Website
+			My{' '}<Color green>Website</Color>
 		</Link>
 	);
 	console.log(actual);
