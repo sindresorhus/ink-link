@@ -1,7 +1,34 @@
 import {serial as test} from 'ava';
 import React from 'react';
-import {renderToString, Color} from 'ink';
+import {render, Color} from 'ink';
 import clearModule from 'clear-module';
+
+// Fake process.stdout
+class Stream {
+	constructor() {
+		this.output = '';
+		this.columns = 100;
+	}
+
+	write(str) {
+		this.output = str;
+	}
+
+	get() {
+		return this.output;
+	}
+}
+
+const renderToString = node => {
+	const stream = new Stream();
+
+	render(node, {
+		stdout: stream,
+		debug: true
+	});
+
+	return stream.get();
+};
 
 test.beforeEach(() => {
 	clearModule.all();
