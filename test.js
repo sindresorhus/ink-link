@@ -1,5 +1,7 @@
 import {serial as test} from 'ava';
-import {h, renderToString} from 'ink';
+import React from 'react';
+import {Color} from 'ink';
+import {render} from 'ink-testing-library';
 import clearModule from 'clear-module';
 
 test.beforeEach(() => {
@@ -14,24 +16,24 @@ test('render', t => {
 	process.env.FORCE_HYPERLINK = 1;
 	const Link = require('.');
 
-	const actual = renderToString(
+	const {lastFrame} = render(
 		<Link url="https://sindresorhus.com">
-			My Website
+			My{' '}<Color green>Website</Color>
 		</Link>
 	);
-	console.log(actual);
-	t.snapshot(actual);
+	console.log(lastFrame());
+	t.snapshot(lastFrame());
 });
 
 test('render fallback', t => {
 	process.env.FORCE_HYPERLINK = 0;
 	const Link = require('.');
 
-	const actual = renderToString(
+	const {lastFrame} = render(
 		<Link url="https://sindresorhus.com">
 			My Website
 		</Link>
 	);
-	console.log(actual);
-	t.snapshot(actual);
+	console.log(lastFrame());
+	t.snapshot(lastFrame());
 });

@@ -1,10 +1,14 @@
-import {h, renderToString} from 'ink';
+import React from 'react';
+import {Text} from 'ink';
 import PropTypes from 'prop-types';
 import terminalLink from 'terminal-link';
 
 const Link = props => {
-	const text = renderToString(<span>{props.children}</span>);
-	return <span>{terminalLink(text, props.url)}</span>;
+	return (
+		<Text unstable__transformChildren={children => terminalLink(children, props.url)}>
+			{props.children}
+		</Text>
+	);
 };
 
 Link.propTypes = {

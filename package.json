@@ -41,31 +41,23 @@
 		"terminal-link": "^1.0.0"
 	},
 	"devDependencies": {
+		"@babel/cli": "^7.2.3",
+		"@babel/core": "^7.3.3",
+		"@babel/preset-react": "^7.0.0",
 		"ava": "*",
-		"babel-cli": "^6.26.0",
-		"babel-plugin-transform-react-jsx": "^6.24.1",
 		"clear-module": "^2.1.0",
 		"eslint-config-xo-react": "^0.16.0",
 		"eslint-plugin-react": "^7.7.0",
-		"ink": "^0.5.0",
+		"ink": "^2.0.0",
+		"ink-testing-library": "^1.0.0",
+		"react": "^16.8.2",
 		"xo": "*"
 	},
 	"babel": {
 		"presets": [
-			"@ava/stage-4"
-		],
-		"plugins": [
-			[
-				"transform-react-jsx",
-				{
-					"pragma": "h",
-					"useBuiltIns": true
-				}
-			]
+			"@ava/stage-4",
+			"@babel/preset-react"
 		]
-	},
-	"ava": {
-		"babel": "inherit"
 	},
 	"xo": {
 		"extends": [
@@ -73,11 +65,6 @@
 		],
 		"ignores": [
 			"dist.js"
-		],
-		"settings": {
-			"react": {
-				"pragma": "h"
-			}
-		}
+		]
 	}
 }
