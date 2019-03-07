@@ -17,15 +17,14 @@ $ npm install ink-link
 ## Usage
 
 ```js
-import {h, render, Color} from 'ink';
+import React from 'react';
+import {render, Color} from 'ink';
 import Link from 'ink-link';
 
 render(
-	<div>
-		<Link url="https://sindresorhus.com">
-			My <Color cyan>Website</Color>
-		</Link>
-	</div>
+	<Link url="https://sindresorhus.com">
+		My <Color cyan>Website</Color>
+	</Link>
 );
 ```
 
@@ -42,13 +41,13 @@ For unsupported terminals, the link will be printed in parens after the text: `M
 
 Type: `string`
 
-URL to link to.
+The URL to link to.
 
 
 ## Related
 
 - [terminal-link](https://github.com/sindresorhus/terminal-link) - Create clickable links in the terminal
-- [ink-box](https://github.com/sindresorhus/ink-box) - Box component for Ink
+- [ink-box](https://github.com/sindresorhus/ink-box) - Styled box component for Ink
 - [ink-gradient](https://github.com/sindresorhus/ink-gradient) - Gradient color component for Ink
 - [ink-big-text](https://github.com/sindresorhus/ink-big-text) - Awesome text component for Ink
 

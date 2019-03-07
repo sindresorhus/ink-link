@@ -12,8 +12,11 @@ const Link = props => {
 };
 
 Link.propTypes = {
-	url: PropTypes.string,
-	children: PropTypes.any.isRequired
+	children: PropTypes.oneOfType([
+		PropTypes.arrayOf(PropTypes.node),
+		PropTypes.node
+	]).isRequired,
+	url: PropTypes.string
 };
 
 Link.defaultProps = {
