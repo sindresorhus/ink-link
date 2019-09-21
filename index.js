@@ -6,7 +6,7 @@ import terminalLink from 'terminal-link';
 const Link = props => {
 	const options = {
 		fallback: (text, url) => {
-			return props.fallback ? `${text} (${url})` : text;
+			return props.fallback ? `${text} (\u200B${url}\u200B)` : text;
 		}
 	};
 
