@@ -4,8 +4,14 @@ import PropTypes from 'prop-types';
 import terminalLink from 'terminal-link';
 
 const Link = props => {
+	const options = {
+		fallback: (text, url) => {
+			return props.fallback ? `${text} (${url})` : text;
+		}
+	};
+
 	return (
-		<Text unstable__transformChildren={children => terminalLink(children, props.url)}>
+		<Text unstable__transformChildren={children => terminalLink(children, props.url, options)}>
 			{props.children}
 		</Text>
 	);
@@ -16,11 +22,13 @@ Link.propTypes = {
 		PropTypes.arrayOf(PropTypes.node),
 		PropTypes.node
 	]).isRequired,
-	url: PropTypes.string
+	url: PropTypes.string,
+	fallback: PropTypes.bool
 };
 
 Link.defaultProps = {
-	url: ''
+	url: '',
+	fallback: true
 };
 
 module.exports = Link;
