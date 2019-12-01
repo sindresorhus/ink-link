@@ -45,9 +45,10 @@ The URL to link to.
 
 #### fallback
 
-Type: `boolean`
+Type: `boolean`\
+Default: `true`
 
-For unsupported terminals, `fallback` determines whether the URL should be printed in parens after the text: `My website (https://sindresorhus.com)`. Defaults to `true`.
+Determines whether the URL should be printed in parens after the text for unsupported terminals: `My website (https://sindresorhus.com)`.
 
 ## Related
 
