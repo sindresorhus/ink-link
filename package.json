@@ -38,7 +38,7 @@
 	],
 	"dependencies": {
 		"prop-types": "^15.7.2",
-		"terminal-link": "^2.0.0"
+		"terminal-link": "^2.1.0"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.2.3",
