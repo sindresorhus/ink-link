@@ -22,7 +22,7 @@ Link.propTypes = {
 
 Link.defaultProps = {
 	url: '',
-	fallback: undefined
+	fallback: true
 };
 
 module.exports = Link;

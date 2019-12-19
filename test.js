@@ -50,3 +50,16 @@ test('exclude fallback if disabled', t => {
 	console.log(lastFrame());
 	t.snapshot(lastFrame());
 });
+
+test('include fallback if explicitly enabled', t => {
+	process.env.FORCE_HYPERLINK = 0;
+	const Link = require('.');
+
+	const {lastFrame} = render(
+		<Link fallback url="https://sindresorhus.com">
+			My Website
+		</Link>
+	);
+	console.log(lastFrame());
+	t.snapshot(lastFrame());
+});
