@@ -14,9 +14,9 @@ export interface Props {
 	readonly url?: string;
 
 	/**
-	Description
+	Determines whether the URL should be printed in parens after the text for unsupported terminals: `My website (https://sindresorhus.com)`.
 
-	@default foo
+	@default true
 
 	@example
 	```
@@ -29,12 +29,25 @@ export interface Props {
 }
 
 /**
- * An Ink component that creates clickable links in the terminal.
- *
- * Supported terminals: https://gist.github.com/egmontkob/eb114294efbcd5adb1944c9f3cb5feda
- *
- * For unsupported terminals, the link will be printed in parens after the text: `My website (https://sindresorhus.com)`.
- */
+An Ink component that creates clickable links in the terminal.
+
+Supported terminals: https://gist.github.com/egmontkob/eb114294efbcd5adb1944c9f3cb5feda
+
+For unsupported terminals, the link will be printed in parens after the text: `My website (https://sindresorhus.com)`.
+
+@example
+```
+import React from 'react';
+import {render, Color} from 'ink';
+import Link from 'ink-link';
+
+render(
+	<Link url="https://sindresorhus.com">
+		My <Color cyan>Website</Color>
+	</Link>
+);
+```
+*/
 declare const Link: ReactFC<Props>
 
 export default Link
