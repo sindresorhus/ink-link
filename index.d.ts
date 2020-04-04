@@ -1,16 +1,31 @@
-import * as React from 'react';
+import { FC as ReactFC } from 'react';
 
-export interface LinkProps {
+export interface Props {
 	/**
-	 * The URL to link to.
-	 */
-	url?: string
+	The URL to link to.
+
+	@example
+	```
+	<Link url="https://sindresorhus.com">
+		My <Color cyan>Website</Color>
+	</Link>
+	```
+	*/
+	readonly url?: string;
+
 	/**
-	 * Determines whether the URL should be printed in parens after the text for unsupported terminals: `My website (https://sindresorhus.com)`.
-	 *
-	 * Defaults to enabled.
-	 */
-	fallback?: boolean
+	Description
+
+	@default foo
+
+	@example
+	```
+	<Link url="https://sindresorhus.com" fallback={false}>
+		My <Color cyan>Website</Color>
+	</Link>
+	```
+	*/
+	readonly fallback?: boolean;
 }
 
 /**
@@ -20,4 +35,6 @@ export interface LinkProps {
  *
  * For unsupported terminals, the link will be printed in parens after the text: `My website (https://sindresorhus.com)`.
  */
-export default class Link extends React.Component<LinkProps>{}
+declare const Link: ReactFC<Props>
+
+export default Link
