@@ -1,4 +1,4 @@
-import { FC as ReactFC } from 'react';
+import {FC as ReactFC} from 'react';
 
 export interface Props {
 	/**
@@ -31,7 +31,7 @@ export interface Props {
 /**
 An Ink component that creates clickable links in the terminal.
 
-Supported terminals: https://gist.github.com/egmontkob/eb114294efbcd5adb1944c9f3cb5feda
+[Supported terminals.](https://gist.github.com/egmontkob/eb114294efbcd5adb1944c9f3cb5feda)
 
 For unsupported terminals, the link will be printed in parens after the text: `My website (https://sindresorhus.com)`.
 
