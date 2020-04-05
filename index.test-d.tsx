@@ -1,7 +1,12 @@
 import * as React from 'react';
-import Link, {Props} from '.';
-import {expectType} from 'tsd';
+import Link from '.';
 
-expectType<React.ReactElement<Props, any>>(<Link/>)
-expectType<React.ReactElement<Props, any>>(<Link url='https://sindresorhus.com/'/>)
-expectType<React.ReactElement<Props, any>>(<Link fallback={false}/>)
+() => {
+	return (
+		<>
+			<Link/>
+			<Link url='https://sindresorhus.com/'/>
+			<Link fallback={false}/>
+		</>
+	)
+}
