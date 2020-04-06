@@ -17,10 +17,11 @@
 		"build": "babel index.js --out-file=dist.js",
 		"prepublish": "npm run build",
 		"pretest": "npm run build",
-		"test": "xo && ava"
+		"test": "xo && ava && tsd"
 	},
 	"files": [
-		"dist.js"
+		"dist.js",
+		"index.d.ts"
 	],
 	"keywords": [
 		"ink-component",
@@ -44,6 +45,7 @@
 		"@babel/cli": "^7.2.3",
 		"@babel/core": "^7.3.3",
 		"@babel/preset-react": "^7.0.0",
+		"@types/react": "^16.9.16",
 		"ava": "^1.3.1",
 		"clear-module": "^3.1.0",
 		"eslint-config-xo-react": "^0.19.0",
@@ -52,6 +54,7 @@
 		"ink": "^2.0.3",
 		"ink-testing-library": "^1.0.0",
 		"react": "^16.8.2",
+		"tsd": "^0.11.0",
 		"xo": "^0.24.0"
 	},
 	"peerDependencies": {
