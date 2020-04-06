@@ -6,13 +6,11 @@ Creates clickable links in the terminal!
 
 <img src="screenshot.png" width="332">
 
-
 ## Install
 
 ```
 $ npm install ink-link
 ```
-
 
 ## Usage
 
@@ -27,7 +25,6 @@ render(
 	</Link>
 );
 ```
-
 
 ## API
 
@@ -56,8 +53,3 @@ Determines whether the URL should be printed in parens after the text for unsupp
 - [ink-box](https://github.com/sindresorhus/ink-box) - Styled box component for Ink
 - [ink-gradient](https://github.com/sindresorhus/ink-gradient) - Gradient color component for Ink
 - [ink-big-text](https://github.com/sindresorhus/ink-big-text) - Awesome text component for Ink
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)
