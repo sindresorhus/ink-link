@@ -55,7 +55,6 @@
 		"ink-testing-library": "^1.0.0",
 		"react": "^16.8.2",
 		"tsd": "^0.11.0",
-		"typescript": "^3.7.3",
 		"xo": "^0.24.0"
 	},
 	"peerDependencies": {
