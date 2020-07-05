@@ -1,13 +1,15 @@
 import React from 'react';
-import {Text} from 'ink';
+import {Transform, Text} from 'ink';
 import PropTypes from 'prop-types';
 import terminalLink from 'terminal-link';
 
 const Link = props => {
 	return (
-		<Text unstable__transformChildren={children => terminalLink(children, props.url, {fallback: props.fallback})}>
-			{props.children}
-		</Text>
+		<Transform transform={children => terminalLink(children, props.url, {fallback: props.fallback})}>
+			<Text>
+				{props.children}
+			</Text>
+		</Transform>
 	);
 };
 

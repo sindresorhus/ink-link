@@ -6,6 +6,8 @@ Creates clickable links in the terminal!
 
 <img src="screenshot.png" width="332">
 
+**Note:** Looking for a version compatible with Ink 2.x? Check out [previous release](https://github.com/sindresorhus/ink-link/tree/v1.1.0).
+
 ## Install
 
 ```
@@ -16,12 +18,12 @@ $ npm install ink-link
 
 ```js
 import React from 'react';
-import {render, Color} from 'ink';
+import {render, Text} from 'ink';
 import Link from 'ink-link';
 
 render(
 	<Link url="https://sindresorhus.com">
-		My <Color cyan>Website</Color>
+		My <Text color="cyan">Website</Text>
 	</Link>
 );
 ```

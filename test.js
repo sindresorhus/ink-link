@@ -1,6 +1,6 @@
 import {serial as test} from 'ava';
 import React from 'react';
-import {Color} from 'ink';
+import {Text} from 'ink';
 import {render} from 'ink-testing-library';
 import clearModule from 'clear-module';
 
@@ -18,7 +18,7 @@ test('render', t => {
 
 	const {lastFrame} = render(
 		<Link url="https://sindresorhus.com">
-			My{' '}<Color green>Website</Color>
+			My{' '}<Text color="green">Website</Text>
 		</Link>
 	);
 	console.log(lastFrame());
