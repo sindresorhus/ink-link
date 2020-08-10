@@ -19,7 +19,7 @@ Link.propTypes = {
 		PropTypes.node
 	]).isRequired,
 	url: PropTypes.string,
-	fallback: PropTypes.bool
+	fallback: PropTypes.bool // eslint-disable-line react/boolean-prop-naming
 };
 
 Link.defaultProps = {

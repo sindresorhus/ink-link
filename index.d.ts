@@ -48,6 +48,6 @@ render(
 );
 ```
 */
-declare const Link: ReactFC<Props>
+declare const Link: ReactFC<Props>;
 
-export default Link
+export default Link;
