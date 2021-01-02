@@ -1,4 +1,4 @@
-# ink-link [![Build Status](https://travis-ci.com/sindresorhus/ink-link.svg?branch=master)](https://travis-ci.com/github/sindresorhus/ink-link)
+# ink-link
 
 > Link component for [Ink](https://github.com/vadimdemedes/ink)
 
