@@ -26,6 +26,8 @@ export interface Props {
 	```
 	*/
 	readonly fallback?: boolean;
+	
+	children?: React.ReactNode;
 }
 
 /**
