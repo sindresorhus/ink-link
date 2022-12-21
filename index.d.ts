@@ -1,4 +1,4 @@
-import {FC as ReactFC} from 'react';
+import {FC as ReactFC, ReactNode} from 'react';
 
 export interface Props {
 	/**
@@ -26,8 +26,8 @@ export interface Props {
 	```
 	*/
 	readonly fallback?: boolean;
-	
-	children?: React.ReactNode;
+
+	children?: ReactNode;
 }
 
 /**
