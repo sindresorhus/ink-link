@@ -1,12 +1,9 @@
-import {serial as test} from 'ava';
-import React from 'react';
+import process from 'node:process';
+import test from 'ava';
+import React, {type FC as ReactFC, type ReactNode} from 'react';
 import {Text} from 'ink';
 import {render} from 'ink-testing-library';
-import clearModule from 'clear-module';
-
-test.beforeEach(() => {
-	clearModule.all();
-});
+import Link from './source/index.js';
 
 test.afterEach(() => {
 	delete process.env.FORCE_HYPERLINK;
@@ -19,12 +16,11 @@ test('render', t => {
 	}
 
 	process.env.FORCE_HYPERLINK = 1;
-	const Link = require('.');
 
 	const {lastFrame} = render(
-		<Link url="https://sindresorhus.com">
-			My{' '}<Text color="green">Website</Text>
-		</Link>
+		<Link url='https://sindresorhus.com'>
+			My{' '}<Text color='green'>Website</Text>
+		</Link>,
 	);
 	console.log(lastFrame());
 	t.snapshot(lastFrame());
@@ -32,12 +28,11 @@ test('render', t => {
 
 test('render fallback', t => {
 	process.env.FORCE_HYPERLINK = 0;
-	const Link = require('.');
 
 	const {lastFrame} = render(
-		<Link url="https://sindresorhus.com">
+		<Link url='https://sindresorhus.com'>
 			My Website
-		</Link>
+		</Link>,
 	);
 	console.log(lastFrame());
 	t.snapshot(lastFrame());
@@ -45,12 +40,11 @@ test('render fallback', t => {
 
 test('exclude fallback if disabled', t => {
 	process.env.FORCE_HYPERLINK = 0;
-	const Link = require('.');
 
 	const {lastFrame} = render(
-		<Link url="https://sindresorhus.com" fallback={false}>
+		<Link url='https://sindresorhus.com' fallback={false}>
 			My Website
-		</Link>
+		</Link>,
 	);
 	console.log(lastFrame());
 	t.snapshot(lastFrame());
@@ -58,12 +52,11 @@ test('exclude fallback if disabled', t => {
 
 test('include fallback if explicitly enabled', t => {
 	process.env.FORCE_HYPERLINK = 0;
-	const Link = require('.');
 
 	const {lastFrame} = render(
-		<Link fallback url="https://sindresorhus.com">
+		<Link fallback url='https://sindresorhus.com'>
 			My Website
-		</Link>
+		</Link>,
 	);
 	console.log(lastFrame());
 	t.snapshot(lastFrame());

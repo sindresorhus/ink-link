@@ -6,12 +6,10 @@ Creates clickable links in the terminal!
 
 <img src="screenshot.png" width="332">
 
-Looking for a version compatible with Ink 2.x? Check out [this release](https://github.com/sindresorhus/ink-link/tree/v1.1.0).
-
 ## Install
 
-```
-$ npm install ink-link
+```sh
+npm install ink-link
 ```
 
 ## Usage
