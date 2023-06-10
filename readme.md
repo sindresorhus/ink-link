@@ -50,6 +50,5 @@ Determines whether the URL should be printed in parens after the text for unsupp
 ## Related
 
 - [terminal-link](https://github.com/sindresorhus/terminal-link) - Create clickable links in the terminal
-- [ink-box](https://github.com/sindresorhus/ink-box) - Styled box component for Ink
 - [ink-gradient](https://github.com/sindresorhus/ink-gradient) - Gradient color component for Ink
 - [ink-big-text](https://github.com/sindresorhus/ink-big-text) - Awesome text component for Ink

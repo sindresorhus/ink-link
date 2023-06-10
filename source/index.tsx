@@ -5,6 +5,8 @@ import terminalLink from 'terminal-link';
 
 /* eslint-disable react/boolean-prop-naming */
 export type Props = {
+	readonly children: ReactNode;
+
 	/**
 	The URL to link to.
 
@@ -36,8 +38,6 @@ export type Props = {
 	```
 	*/
 	readonly fallback?: boolean;
-
-	children?: ReactNode;
 };
 /* eslint-enable react/boolean-prop-naming */
 
