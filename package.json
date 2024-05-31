@@ -1,6 +1,6 @@
 {
 	"name": "ink-link",
-	"version": "3.0.0",
+	"version": "4.0.0",
 	"description": "Link component for Ink",
 	"license": "MIT",
 	"repository": "sindresorhus/ink-link",
