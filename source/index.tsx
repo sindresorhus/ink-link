@@ -61,10 +61,10 @@ render(
 );
 ```
 */
-const Link: ReactFC<Props> = props => ( // eslint-disable-line react/function-component-definition
-	<Transform transform={children => terminalLink(children, props.url, {fallback: props.fallback})}>
+const Link: ReactFC<Props> = ({children, url, fallback = true}) => ( // eslint-disable-line react/function-component-definition
+	<Transform transform={children => terminalLink(children, url, {fallback})}>
 		<Text>
-			{props.children}
+			{children}
 		</Text>
 	</Transform>
 );
