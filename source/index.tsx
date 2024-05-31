@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import terminalLink from 'terminal-link';
 
 /* eslint-disable react/boolean-prop-naming */
-export type Props = {
+export type Props = { // eslint-disable-line unicorn/prevent-abbreviations
 	readonly children: ReactNode;
 
 	/**
