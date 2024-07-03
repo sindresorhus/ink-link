@@ -78,8 +78,4 @@ Link.propTypes = {
 	fallback: PropTypes.bool, // eslint-disable-line react/boolean-prop-naming
 };
 
-Link.defaultProps = {
-	fallback: true,
-};
-
 export default Link;
