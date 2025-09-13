@@ -3,7 +3,6 @@ import {Transform, Text} from 'ink';
 import PropTypes from 'prop-types';
 import terminalLink from 'terminal-link';
 
-/* eslint-disable react/boolean-prop-naming */
 export type Props = { // eslint-disable-line unicorn/prevent-abbreviations
 	readonly children: ReactNode;
 
@@ -25,6 +24,8 @@ export type Props = { // eslint-disable-line unicorn/prevent-abbreviations
 	/**
 	Determines whether the URL should be printed in parens after the text for unsupported terminals: `My website (https://sindresorhus.com)`.
 
+	Can be a boolean or a function that receives the text and URL and returns a custom fallback string.
+
 	@default true
 
 	@example
@@ -35,11 +36,14 @@ export type Props = { // eslint-disable-line unicorn/prevent-abbreviations
 	<Link url="https://sindresorhus.com" fallback={false}>
 		My <Color cyan>Website</Color>
 	</Link>
+
+	<Link url="https://sindresorhus.com" fallback={(text, url) => `[${text}](${url})`}>
+		My <Color cyan>Website</Color>
+	</Link>
 	```
 	*/
-	readonly fallback?: boolean;
+	readonly fallback?: boolean | ((text: string, url: string) => string);
 };
-/* eslint-enable react/boolean-prop-naming */
 
 /**
 An Ink component that creates clickable links in the terminal.
@@ -75,7 +79,7 @@ Link.propTypes = {
 		PropTypes.node,
 	]).isRequired,
 	url: PropTypes.string.isRequired,
-	fallback: PropTypes.bool, // eslint-disable-line react/boolean-prop-naming
+	fallback: PropTypes.oneOfType([PropTypes.bool, PropTypes.func]),
 };
 
 export default Link;

@@ -42,10 +42,18 @@ The URL to link to.
 
 #### fallback
 
-Type: `boolean`\
+Type: `boolean | (text: string, url: string) => string`\
 Default: `true`
 
 Determines whether the URL should be printed in parens after the text for unsupported terminals: `My website (https://sindresorhus.com)`.
+
+Can also be a function that receives the text and URL and returns a custom fallback string.
+
+```js
+<Link url="https://sindresorhus.com" fallback={(text, url) => `[${text}](${url})`}>
+	My Website
+</Link>
+```
 
 ## Related
 
