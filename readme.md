@@ -32,7 +32,7 @@ render(
 
 [Supported terminals.](https://gist.github.com/egmontkob/eb114294efbcd5adb1944c9f3cb5feda)
 
-For unsupported terminals, the link will be printed in parens after the text: `My website (https://sindresorhus.com)`.
+For unsupported terminals, the link will be printed after the text: `My website https://sindresorhus.com`.
 
 #### url
 
@@ -45,7 +45,7 @@ The URL to link to.
 Type: `boolean | (text: string, url: string) => string`\
 Default: `true`
 
-Determines whether the URL should be printed in parens after the text for unsupported terminals: `My website (https://sindresorhus.com)`.
+Determines whether the URL should be printed after the text for unsupported terminals: `My website https://sindresorhus.com`.
 
 Can also be a function that receives the text and URL and returns a custom fallback string.
 

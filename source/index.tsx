@@ -1,9 +1,8 @@
-import React, {type FC as ReactFC, type ReactNode} from 'react';
+import {type FC as ReactFC, type ReactNode} from 'react';
 import {Transform, Text} from 'ink';
-import PropTypes from 'prop-types';
 import terminalLink from 'terminal-link';
 
-export type Props = { // eslint-disable-line unicorn/prevent-abbreviations
+export type Props = {
 	readonly children: ReactNode;
 
 	/**
@@ -22,7 +21,7 @@ export type Props = { // eslint-disable-line unicorn/prevent-abbreviations
 	readonly url: string;
 
 	/**
-	Determines whether the URL should be printed in parens after the text for unsupported terminals: `My website (https://sindresorhus.com)`.
+	Determines whether the URL should be printed after the text for unsupported terminals: `My website https://sindresorhus.com`.
 
 	Can be a boolean or a function that receives the text and URL and returns a custom fallback string.
 
@@ -50,7 +49,7 @@ An Ink component that creates clickable links in the terminal.
 
 [Supported terminals.](https://gist.github.com/egmontkob/eb114294efbcd5adb1944c9f3cb5feda)
 
-For unsupported terminals, the link will be printed in parens after the text: `My website (https://sindresorhus.com)`.
+For unsupported terminals, the link will be printed after the text: `My website https://sindresorhus.com`.
 
 @example
 ```
@@ -65,21 +64,12 @@ render(
 );
 ```
 */
-const Link: ReactFC<Props> = ({children, url, fallback = true}) => ( // eslint-disable-line react/function-component-definition
+const Link: ReactFC<Props> = ({children, url, fallback = true}) => (
 	<Transform transform={children => terminalLink(children, url, {fallback})}>
 		<Text>
 			{children}
 		</Text>
 	</Transform>
 );
-
-Link.propTypes = {
-	children: PropTypes.oneOfType([
-		PropTypes.arrayOf(PropTypes.node),
-		PropTypes.node,
-	]).isRequired,
-	url: PropTypes.string.isRequired,
-	fallback: PropTypes.oneOfType([PropTypes.bool, PropTypes.func]),
-};
 
 export default Link;
